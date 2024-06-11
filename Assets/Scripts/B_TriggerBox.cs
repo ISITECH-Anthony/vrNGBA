@@ -21,10 +21,16 @@ public class NewBehaviourScript : MonoBehaviour
     // Quand un objet entre dans le trigger
     void OnTriggerEnter(Collider other)
     {
-        // On Change la couleur de l'objet
-        other.GetComponent<Renderer>().material.color = Color.blue;
-        // On fait en sorte de plus pouvoir le bouger 
-        other.GetComponent<XRGrabInteractable>().enabled = false;
+        if (other.GetComponent<XRGrabInteractable>().isSelected == false) {
+            // On Change la couleur de l'objet
+            other.GetComponent<Renderer>().material.color = Color.blue;
+            // On fait en sorte de plus pouvoir le bouger 
+            other.GetComponent<XRGrabInteractable>().enabled = false;
+            // On joue le son
+            other.GetComponent<AudioSource>().Play();
+            // On supprime le son
+            // Destroy(other.GetComponent<AudioSource>(), 1);
+        }
 
     }
 }
