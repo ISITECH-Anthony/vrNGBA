@@ -1,5 +1,14 @@
 {
   "dependencies": {
+    "com.htc.upm.wave.xrsdk": {
+      "version": "5.6.0-r.10.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.xr.management": "3.2.4"
+      },
+      "url": "https://npm-registry.vive.com"
+    },
     "com.unity.burst": {
       "version": "1.8.15",
       "depth": 1,
